@@ -1,0 +1,8 @@
+---
+const { as = "section", class: classnames = "", ...attrs } = Astro.props;
+const Tag = as;
+---
+
+<Tag class={`w-full min-h-screen py-12 flex flex-col ${classnames}`} {...attrs}>
+    <slot />
+</Tag>

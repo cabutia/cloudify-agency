@@ -1,0 +1,14 @@
+---
+import divider1 from "@/assets/divider_1.svg?raw";
+import divider2 from "@/assets/divider_2.svg?raw";
+const { divider, class: classnames = "" } = Astro.props;
+
+const svg: string = (
+    {
+        "intersecting-curves": divider1,
+        waves: divider2,
+    } as Record<string, string>
+)[divider];
+---
+
+{svg && <div class={`w-full ${classnames}`} set:html={svg} />}

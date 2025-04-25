@@ -1,0 +1,8 @@
+---
+const { as = "div", class: classnames = "", ...attrs } = Astro.props;
+const Tag = as;
+---
+
+<Tag class={`w-full ${classnames}`} {...attrs}>
+    <slot />
+</Tag>

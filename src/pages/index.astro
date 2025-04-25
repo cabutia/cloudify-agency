@@ -1,16 +1,131 @@
 ---
+import Container from "@/components/Container.astro";
+import Header from "@/components/Header.astro";
+import Section from "@/components/Section.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import Navbar from "@/components/Navbar.astro";
 
+import divider1 from "@/assets/divider_1.svg?raw";
+import SectionDivider from "@/components/SectionDivider.astro";
+import SectionSubtitle from "@/components/SectionSubtitle.astro";
+import SectionHeadingContainer from "@/components/SectionHeadingContainer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+    <Navbar />
+    <Header />
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading><span class="text-white/30 font-thin">Sobre</span> nosotros</SectionHeading>
+                <SectionSubtitle
+                    >No somos una agencia tradicional. Somos un equipo obsesionado con el diseño que funciona.
+                    Creatividad con propósito, sin excusas, sin procesos eternos.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+    </Section>
+
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading><span class="text-white/30 font-thin">Nuestros</span> servicios</SectionHeading>
+                <SectionSubtitle>
+                    No vendemos humo. Ofrecemos soluciones reales: diseño web, desarrollo, SEO, branding y
+                    automatizaciones que te ahorran tiempo y plata. Elegí lo que necesitás, y lo ejecutamos sin vueltas.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+    </Section>
+
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading>Proceso <span class="text-white/30 font-thin">ágil</span></SectionHeading>
+                <SectionSubtitle>
+                    Somos rápidos, claros y directos. Nuestro método minimiza el ruido y maximiza el impacto. Sabés qué
+                    esperar en cada etapa y cuándo lo vas a tener listo.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+    </Section>
+
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading>Testimonios</SectionHeading>
+                <SectionSubtitle>
+                    Podríamos seguir hablando… pero preferimos que hablen nuestros clientes. Esto es lo que dicen
+                    quienes ya confiaron en nosotros.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+    </Section>
+
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading><span class="text-white/30 font-thin">Estas listo?</span> escribinos!</SectionHeading>
+                <SectionSubtitle>
+                    Si llegaste hasta acá, es por algo. Mandanos un mensaje y contanos qué necesitás. Nosotros nos
+                    encargamos del resto.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+    </Section>
+
+    <Section class="relative bg-black">
+        <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+            <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+            </div>
+        </div>
+        <Container class="min-h-screen">
+            <SectionHeadingContainer class="sticky top-24">
+                <SectionHeading>
+                    Preguntas <span class="text-white/30 font-thin">frecuentes</span>
+                </SectionHeading>
+                <SectionSubtitle>
+                    Tenés preguntas. Tenemos respuestas. Acá despejamos lo más común, para que no pierdas tiempo
+                    preguntándote lo que ya podés saber.
+                </SectionSubtitle>
+            </SectionHeadingContainer>
+        </Container>
+
+        <Section class="relative bg-black">
+            <div class="absolute top-0 right-6 w-1/8 aspect-square bg-lime-300 rounded-full rounded-br-none">
+                <div class="absolute top-full right-full w-full aspect-square bg-lime-300 rounded-full rounded-tr-none">
+                </div>
+            </div>
+            <Container class="min-h-screen">
+                <SectionHeadingContainer class="sticky top-24">
+                    <SectionHeading>Cotizá tu proyecto</SectionHeading>
+                    <SectionSubtitle>
+                        ¿Querés números concretos? Completá el formulario y te pasamos una propuesta clara, rápida y sin
+                        letra chica.
+                    </SectionSubtitle>
+                </SectionHeadingContainer>
+            </Container>
+        </Section>
+    </Section>
+</BaseLayout>

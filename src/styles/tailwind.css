@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+}
+
+@theme {
+    /* Fonts */
+    --font-body: "Rubik";
+    --font-brand: "Montserrat";
+    --font-serif: "PT Serif";
+}

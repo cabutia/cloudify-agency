@@ -1,0 +1,59 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import "@/styles/tailwind.css";
+---
+
+<html lang="en">
+    <head>
+        <slot name="head">
+            <BaseHead />
+        </slot>
+    </head>
+    <body class="w-full font-body text-white scroll-smooth bg-black">
+        <slot />
+
+        <script>
+            const highlighted = document.querySelectorAll("[data-highlight]");
+            highlighted.forEach((wordEl) => {
+                wordEl.classList.add("relative");
+                const fill = wordEl.getAttribute("data-highlight") ?? "bg-gray-400";
+
+                const text = wordEl.textContent;
+                const relativeEl = document.createElement("span");
+                relativeEl.classList.add("relative", "z-10");
+                relativeEl.textContent = text;
+
+                const highlightEl = document.createElement("div");
+                highlightEl.style.transitionProperty = "width, opacity";
+                highlightEl.style.transitionDuration = "500ms";
+                const MAX_DEGREES = 5;
+                const deg = (Math.floor(Math.random() * MAX_DEGREES) + 2) * (Math.random() > 0.5 ? 1 : -1);
+                console.log({ deg });
+                highlightEl.style.transform = `rotate(${deg}deg)`;
+                highlightEl.classList.add(
+                    "absolute",
+                    "rounded-md",
+                    "left-1/4",
+                    "bottom-2",
+                    "h-[0.3em]",
+                    "opacity-90",
+                    "z-0",
+                    "w-0",
+                    fill,
+                );
+
+                wordEl.innerHTML = "";
+                wordEl.appendChild(relativeEl);
+                wordEl.appendChild(highlightEl);
+
+                setTimeout(
+                    () => {
+                        highlightEl.classList.remove("w-0");
+                        highlightEl.classList.add("w-3/4");
+                    },
+                    Math.floor(Math.random() * 1000) + 600,
+                );
+            });
+        </script>
+    </body>
+</html>
